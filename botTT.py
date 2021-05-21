@@ -17,9 +17,9 @@ for tweet in tweepy.Cursor(api.search,search).items(numero):
     try:
         if((tweet.text)=='Insira aqui a palavra que deseja que o bot procure'):
             print("Nome do usuário: @" + tweet.user.screen_name)
-            '''api.update_status("@" + tweet.user.screen + " Foda-se KKKKK", in_reply_to_status_id=tweet.id)
+            api.update_status("@" + tweet.user.screen_name + " Insira aqui a mensagem que o bot vai enviar", in_reply_to_status_id=tweet.id)
             print("Tweet enviado corretamente")
-            time.sleep(30)'''
+            time.sleep(30)
     except tweepy.TweepError as e:
         print(e.reason)
     except StopIteration:
